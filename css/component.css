@@ -5,7 +5,7 @@
 	width: 100%;
 	background: #f6f6f6;
 	z-index: 10000;
-	height: 230px;
+	height: 150px;
 	overflow: hidden;
 	-webkit-transition: height 0.3s;
 	-moz-transition: height 0.3s;
@@ -16,7 +16,7 @@
 	width: 90%;
 	max-width: 69em;
 	margin: 0 auto;
-	padding: 0 1.875em;
+	padding: 0em;
 }
 
 .cbp-af-header h1,
@@ -28,7 +28,7 @@
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
 .cbp-af-header h1,
 .cbp-af-header nav a {
-	line-height: 230px;
+	line-height: 150px;
 }
 
 .cbp-af-header h1 {
@@ -46,13 +46,48 @@
 
 .cbp-af-header nav a {
 	color: #aaa;
+	display: inline-block;
 	font-weight: 700;
-	margin: 0 0 0 20px;
+	height: 150px;
+	padding: 0 10px;
+	margin: 0;
 	font-size: 1.4em;
+	outline: none;
 }
 
 .cbp-af-header nav a:hover {
 	color: #333;
+	background-color: #eeeeee;
+}
+
+/* hover styles for each anchor nav */
+.cbp-af-header nav a#demand:hover {
+	background-color: #C2E3F6;
+}
+.cbp-af-header nav a#energy:hover {
+	background-color: #C8CCF8;
+}
+.cbp-af-header nav a#distribution:hover {
+	background-color: #C1F8DC;
+}
+.cbp-af-header nav a#storage:hover {
+	background-color: #FFE5C6;
+}
+/* set bg color for targeted anchor */
+.cbp-af-header nav a:target {
+	color: #333;
+}
+.cbp-af-header nav a#demand:target {
+	background-color: #95CCED;
+}
+.cbp-af-header nav a#energy:target {
+	background-color: #9EA4EF;
+}
+.cbp-af-header nav a#distribution:target {
+	background-color: #92F0C0;
+}
+.cbp-af-header nav a#storage:target {
+	background-color: #FFD29B;
 }
 
 /* Transitions and class for reduced height */
@@ -64,12 +99,13 @@
 }
 
 .cbp-af-header.cbp-af-header-shrink {
-	height: 90px;
+	height: 75px;
 }
 
 .cbp-af-header.cbp-af-header-shrink h1,
 .cbp-af-header.cbp-af-header-shrink nav a {
-	line-height: 90px;
+	line-height: 75px;
+	height: 75px;
 }
 
 .cbp-af-header.cbp-af-header-shrink h1 {
@@ -78,7 +114,7 @@
 
 /* Example Media Queries */
 @media screen and (max-width: 55em) {
-	
+
 	.cbp-af-header .cbp-af-inner {
 		width: 100%;
 	}

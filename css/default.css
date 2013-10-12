@@ -38,7 +38,7 @@ a:hover {
 }
 
 .container > header,
-.main section > div {
+.main div > div {
 	width: 90%;
 	max-width: 69em;
 	margin: 0 auto;
@@ -168,16 +168,29 @@ a:hover {
 	content: "\e004";
 }
 
-.main > section:nth-child(even) {
+.main {
+	overflow: hidden;
+	width: 400%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.main > .section-scroller {
+	float: left;
+	width: 25%;
+}
+
+.main > div:nth-child(even) {
 	background: #87cef8;
 	color: #fff;
 }
 
-.main section:first-child > div {
+.main div:first-child > div {
 	padding-top: 0em;
 }
 
-.main section p {
+.main div p {
 	margin: 0;
 	padding: 1em 0;
 	font-size: 1.8em;
@@ -204,7 +217,7 @@ a:hover {
 		text-indent: 30px;
 	}
 
-	.main section p {
+	.main div p {
 		padding: 2em 5%;
 		font-size: 1.4em;
 	}
